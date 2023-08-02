@@ -15,13 +15,13 @@ When creating contents or providing snapshot illustrations of a project, screens
 
 ### Usage
 
-Before, taking your series of screenshots, type the following command.
+Before taking your series of screenshots, type the following command.
 
 ```
 sstool -newset
 ```
 
-Next
+Next, begin to take your screenshots that you would like to be grouped together
 
 ```
 sstool -rename
@@ -34,3 +34,5 @@ Finally, move the folder to your current directory with
 ```
 sstool -dropin <optional parameter: new name for the folder>
 ```
+
+You can repeat the process above for a new group of screenshots
