@@ -1,6 +1,6 @@
 # Command Line Productivity Tools
 
-Simply bash scripts for making life easier.
+Simple bash scripts for making life easier.
 
 ![bash](https://opensource.com/sites/default/files/lead-images/bash_command_line.png)
 
@@ -11,7 +11,7 @@ _.zprofile_
 
 # sstool
 
-When creating contents or providing snapshot illustrations of a project, screenshots are oftenly used. However, the default screenshot names and directory of output for macOS is often hard to work with. Sstool is a simply script that could help organize these screen shot files.
+When creating contents or providing snapshot illustrations of a project, screenshots are oftenly used. However, the default screenshot names and directory of output for macOS is often hard to work with. Sstool is a simple script that could help organize these screen shot files.
 
 ### Usage
 
