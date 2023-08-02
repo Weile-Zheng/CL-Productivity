@@ -1,0 +1,41 @@
+#!/bin/bash
+
+#Since changing default screenshot directory in macOS need to modify system preference and 
+#often should be done with caution, it is better to just move all previous screenshots to one folder,
+#manipulate the current screenshots after that, and move all previous screenshots back to desktop. 
+
+newSet(){
+    mkdir ~/desktop/tempHolder_ss
+    mv ~/desktop/Screen* ~/desktop/tempHolder_ss
+
+}
+
+rename(){
+    mkdir ~/desktop/ss_set
+    filenum=$(ls ~/desktop | egrep -i "^Screenshot" | wc -l)
+
+    for((i=0; i<$filenum; i++));do
+        file=$(ls ~/desktop | egrep -m 1 "^Screenshot")
+        mv ~/desktop/"$file" ~/desktop/ss_set/img$i.png
+    done
+    
+    mv ~/desktop/tempHolder_ss/Screen* ~/desktop
+    rmdir tempHolder_ss
+}
+
+dropin(){
+    mv ~/desktop/ss_set ./"$1"
+}
+
+if [ "$1" == "-newset" ]; then 
+newSet
+echo "New Set Ready"
+
+elif [ "$1" == "-rename" ]; then 
+rename
+echo "Screenshots Renamed. Files in ~/desktop/ss_set"
+
+elif [ "$1" == "-dropin" ]; then
+    dropin "$2"
+    echo "ss_set now in current directory"
+fi
