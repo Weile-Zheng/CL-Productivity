@@ -20,7 +20,7 @@ rename(){
     done
     
     mv ~/desktop/tempHolder_ss/Screen* ~/desktop
-    rmdir tempHolder_ss
+    rmdir ~/desktop/tempHolder_ss
 }
 
 dropin(){
