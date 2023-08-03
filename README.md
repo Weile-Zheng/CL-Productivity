@@ -36,3 +36,15 @@ sstool -dropin <optional parameter: new name for the folder>
 ```
 
 You can repeat the process above for a new group of screenshots
+
+<br />
+
+# Git Tracking
+
+Although most IDEs are now integrated with version controls, using git via command line is still important and useful on many occasions. The gitTracking file help manage git version control in the terminal by showing
+
+- If current directory is initiated as a repo
+- The current branch
+- The current status
+
+<img src="./img/img1.png" width=100% height=100%>

@@ -1,0 +1,18 @@
+#! /bin/bash
+
+git_status(){
+    local message=""
+    git status> /dev/null 2>&1
+    if [ $? != "128" ]; then
+	nochange=$(git status | tail -n 1 | egrep -o "no changes added")
+	untracked=$(git status | tail -n 1 | egrep -o "untracked files")
+	nothing=$(git status | tail -n 1 | egrep -o "tree clean")
+	commit=$(git status | head | egrep -o "to be committed")
+        message="| $(git branch) | $untracked$nothing$commit$nochange"
+    fi 
+    echo "$message"
+}
+
+setopt PROMPT_SUBST
+autoload -U colors && colors
+export PROMPT="%{$reset_color%}%n%{$reset_color%}@%{$fg[cyan]%}%m %{$fg[cyan]%}%1|%~ \$(git_status) %{$fg[white]%}%# "
