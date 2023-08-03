@@ -1,0 +1,12 @@
+Note that the \ before $(git_status) is absolutely vital for auto updating the 
+prompt without need to source the zshrc file. 
+export PROMPT="%{$reset_color%}%n%{$reset_color%}@%{$fg[cyan]%}%m %{$fg[cyan]%}%1|%~ \$(git_status) %{$fg[white]%}%# "
+
+Why is it that?
+
+When you load up your terminal, your zshrc file is automatically executed, 
+(Or when you source it explicitly), and the $(function) is executed, and became 
+part of PROMPT variable for the entire lifetime of this senssion. However,
+when you escape it, the function calling will be delayed, where However, when the prompt is displayed,
+Zsh STILL interprets the \$(...) as command substitution,
+ even though the dollar sign is escaped. 

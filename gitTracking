@@ -15,4 +15,7 @@ git_status(){
 
 setopt PROMPT_SUBST
 autoload -U colors && colors
+#Note that the \ before $(git_status) is absolutely vital for auto updating the 
+#prompt without need to source the zshrc file. 
 export PROMPT="%{$reset_color%}%n%{$reset_color%}@%{$fg[cyan]%}%m %{$fg[cyan]%}%1|%~ \$(git_status) %{$fg[white]%}%# "
+

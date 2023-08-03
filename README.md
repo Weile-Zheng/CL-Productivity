@@ -48,3 +48,9 @@ Although most IDEs are now integrated with version controls, using git via comma
 - The current status
 
 <img src="./img/img1.png" width=100% height=100%>
+
+Copy and paste the code into your ~/.zshrc profile or :
+
+```
+echo "${code}" >> ~/.zshrc
+```
