@@ -21,7 +21,9 @@ Before taking your series of screenshots, type the following command.
 sstool -newset
 ```
 
-Next, begin to take your screenshots that you would like to be grouped together
+Now, begin to take your screenshots that you would like to be grouped together.
+
+Next
 
 ```
 sstool -rename
