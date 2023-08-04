@@ -4,9 +4,12 @@
 #often should be done with caution, it is better to just move all previous screenshots to one folder,
 #manipulate the current screenshots after that, and move all previous screenshots back to desktop. 
 
+checkSS=$(ls ~/desktop | egrep "Screenshot*")
 newSet(){
-    mkdir ~/desktop/tempHolder_ss
+    if [ "$checkSS" != "" ]; then 
     mv ~/desktop/Screen* ~/desktop/tempHolder_ss
+    mkdir ~/desktop/tempHolder_ss
+    fi
 
 }
 
@@ -19,8 +22,10 @@ rename(){
         mv ~/desktop/"$file" ~/desktop/ss_set/img$i.png
     done
     
+    if [ "$checkSS" != "" ]; then
     mv ~/desktop/tempHolder_ss/Screen* ~/desktop
     rmdir ~/desktop/tempHolder_ss
+    fi
 }
 
 dropin(){
@@ -39,3 +44,8 @@ elif [ "$1" == "-dropin" ]; then
     dropin "$2"
     echo "ss_set now in current directory"
 fi
+
+
+
+
+
