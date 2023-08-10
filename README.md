@@ -54,7 +54,7 @@ Although most IDEs are now integrated with version controls, using git via the c
 Copy and paste the code into your ~/.zshrc profile or :
 
 ```
-echo "{the code}" >> ~/.zshrc
+echo 'copy the code here' >> ~/.zshrc
 ```
 
 # Emoji
