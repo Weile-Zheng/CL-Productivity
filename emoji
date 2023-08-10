@@ -1,0 +1,11 @@
+#!/bin/bash
+
+emoji(){
+	if [ "$?" != "0" ];then
+	emoji="\U0001F972"
+	else
+	emoji="\U0001F600"
+	fi
+	echo "$emoji"
+}
+export PROMPT="\$(emoji) Weile@%{$fg[cyan]%}%m %{$fg[cyan]%}%1|%~ \$(git_status) %{$fg[white]%}%# "
