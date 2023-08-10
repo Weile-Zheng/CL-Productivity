@@ -43,7 +43,7 @@ You can repeat the process above for a new group of screenshots
 
 # Git Tracking
 
-Although most IDEs are now integrated with version controls, using git via command line is still important and useful on many occasions. The gitTracking file help manage git version control in the terminal by showing
+Although most IDEs are now integrated with version controls, using git via the command line is still important and useful on many occasions. The gitTracking file help manage git version control in the terminal by showing
 
 - If current directory is initiated as a repo
 - The current branch
@@ -56,3 +56,7 @@ Copy and paste the code into your ~/.zshrc profile or :
 ```
 echo "${code}" >> ~/.zshrc
 ```
+
+# Emoji
+
+If your command ran successfully, you get a smiley face in your prompt. If you encounter an error, a sad face appears. Change to other emojis by inputting corresponding unicode to the emoji variable.
