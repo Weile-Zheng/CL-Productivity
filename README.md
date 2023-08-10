@@ -59,4 +59,4 @@ echo "${code}" >> ~/.zshrc
 
 # Emoji
 
-If your command ran successfully, you get a smiley face in your prompt. If you encounter an error, a sad face appears. Change to other emojis by inputting corresponding unicode to the emoji variable.
+If your command ran successfully, you get a smiley face in your prompt. If you encounter an error, a sad face appears. Change to other emojis by inputting corresponding unicode to the emoji variable. Put the code in your .zshrc file, make sure to comment out your original export PROMPT(if you had one)
