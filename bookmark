@@ -1,0 +1,55 @@
+#!/bin/bash
+
+config=~/.bookmarkConfig
+
+checkFile() {
+    if [ -f "$1" ]; then
+        open "$1"
+    elif [ -d "$1" ]; then
+        cd "$1"
+    else
+        echo "$1 is neither a regular file nor a directory."
+    fi
+}
+
+Help() {
+    echo "use -add to add a new bookmark. Ex: bookmark -add [path] [bookmarkname]"
+    echo "use -go to jump to the bookmarked directory or file. Ex: bookmark -go [bookmarkname] "
+    echo "use -list to view all bookmarks. Ex: bookmark -list"
+}
+
+Add() {
+    echo "$2:$3" >> "$config"
+}
+
+Go() {
+    path=$(egrep ":$2\$" "$config" | awk -F ':' '{print $1}')
+    echo "$path"
+    checkFile "$path"
+}
+
+List() {
+    cat "$config"
+}
+
+if [[ ! -e $config ]]; then
+    touch "$config"
+fi
+
+case "$1" in
+    "-help")
+        Help
+        ;;
+    "-add")
+        Add "$@"
+        ;;
+    "-go")
+        "$@"
+        ;;
+    "-list")
+        List
+        ;;
+    *)
+        echo "Unknown option: $1"
+        ;;
+esac

@@ -56,3 +56,8 @@ Copy and paste the code into your ~/.zshrc profile or :
 ```
 echo "${code}" >> ~/.zshrc
 ```
+
+<br />
+
+# Bookmark
+Manage and provide fast access to frequently used, bookmarked directories and files. 
