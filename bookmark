@@ -12,10 +12,16 @@ checkFile() {
     fi
 }
 
+DeleteAll(){
+    echo "" > config
+}
+
 Help() {
     echo "use -add to add a new bookmark. Ex: bookmark -add [path] [bookmarkname]"
     echo "use -go to jump to the bookmarked directory or file. Ex: bookmark -go [bookmarkname] "
     echo "use -list to view all bookmarks. Ex: bookmark -list"
+    echo "use -deleteApp to remove all bookmarks"
+    echo "Your bookmark file is located in .bookmarkConfig in your home directory"
 }
 
 Add() {
