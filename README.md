@@ -63,6 +63,12 @@ echo 'copy the code here' >> ~/.zshrc
 
 Manage and provide fast access to frequently used, bookmarked directories and files.
 
+Since the script is running in a subshell and we look to change directory in the current session (parent shell of the script), we will need to source it in the zshrc file.
+
+```
+echo "Source [Script Path]" >> [zshrc path]
+```
+
 # Emoji
 
 If your command ran successfully, you get a smiley face in your prompt. If you encounter an error, a sad face appears. Change to other emojis by inputting corresponding unicode to the emoji variable. Put the code in your .zshrc file, make sure to comment out your original export PROMPT(if you had one)
