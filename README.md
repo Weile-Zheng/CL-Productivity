@@ -66,7 +66,7 @@ Manage and provide fast access to frequently used, bookmarked directories and fi
 Since the script is running in a subshell and we look to change directory in the current session (parent shell of the script), we will need to source it in the zshrc file.
 
 ```
-echo "Source [Script Path]" >> [zshrc path]
+echo "source [Script Path]" >> [zshrc path]
 ```
 
 # Emoji
