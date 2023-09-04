@@ -55,6 +55,9 @@ case "$1" in
     "-list")
         List
         ;;
+    "-DeleteAll")
+        DeleteAll
+        ;;
     *)
         echo "Unknown option: $1"
         ;;

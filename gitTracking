@@ -8,7 +8,7 @@ git_status(){
 	untracked=$(git status | tail -n 1 | egrep -o "untracked files")
 	nothing=$(git status | tail -n 1 | egrep -o "tree clean")
 	commit=$(git status | head | egrep -o "to be committed")
-        message="| $(git branch) | $untracked$nothing$commit$nochange"
+        message="| $(git branch | egrep "^\*") | $untracked$nothing$commit$nochange"
     fi 
     echo "$message"
 }
